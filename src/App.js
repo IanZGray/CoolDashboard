@@ -73,27 +73,27 @@ const App = () => {
 
             <Routes>
               {/* dashboard */}
-              <Route path="/" element={<Adventuring />} />
-              <Route path="/adventuring" element={<Adventuring />} />
-              <Route path="/character" element={<Character />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/" element={<Adventuring />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/adventuring" element={<Adventuring />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/character" element={<Character />} />
               {/* pages */}
-              <Route path="/items" element={<Items />} />
-              <Route path="/friends" element={<Friends />} />
-              <Route path="/Shops" element={<NPCShops />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/items" element={<Items />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/friends" element={<Friends />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/Shops" element={<NPCShops />} />
               {/* apps */}
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/calendar" element={<Calendar />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/kanban" element={<Kanban />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/editor" element={<Editor />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/color-picker" element={<ColorPicker />} />
               {/* charts */}
-              <Route path="/line" element={<Line />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
-              <Route path="/pyramid" element={<Pyramid />} />
-              <Route path="/stacked" element={<Stacked />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/line" element={<Line />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/area" element={<Area />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/bar" element={<Bar />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/pie" element={<Pie />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/financial" element={<Financial />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/color-mapping" element={<ColorMapping />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/pyramid" element={<Pyramid />} />
+              <Route path="https://main--glowing-yeot-30560d.netlify.app/stacked" element={<Stacked />} />
             </Routes>
           </div>
 
