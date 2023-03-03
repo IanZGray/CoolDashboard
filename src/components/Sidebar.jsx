@@ -41,7 +41,7 @@ const Sidebar = () => {
               </p>
               {item.links.map((link) => (
                 <NavLink
-                  to={`https://main--glowing-yeot-30560d.netlify.app/${link.name}`}
+                  to={`/${link.name}`}
                   key={link.name}
                   onClick={handleCloseSideBar}
                   style={({ isActive }) => ({
