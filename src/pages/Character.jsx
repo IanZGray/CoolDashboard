@@ -120,7 +120,8 @@ const Character = () => {
     // hair, setHair, hairColor, setHairColor, hairType, setHairType,
     // body, setBody, bodyColor, setBodyColor, bodyType, setBodyType 
   } = useStateContext()
-  const buttonClasses = `px-1 md:px-2 mx-2 text-xs md:text-base cursor-pointer z-40 rounded-sm md:font-semibold`
+  // const buttonClasses = `mx-2 text-sm cursor-pointer z-40 md:font-semibold px-4 py-2 hover:text-gray-200`
+  const buttonClasses = `mx-2 inline-block rounded-full bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:text-black shadow-[0_2px_9px_-4px_rgba(59,113,202,0.3)]`
 
   const eyes = [EyesBlack, EyesBlue, EyesBrown, EyesGreen, EyesYellow, EyesPurple, EyesRed, EyesLight]
   const pads = [PadsYellow, PadsBlue, PadsGreen, PadsPurple, PadsRed, PadsBlack, PadsWhite]
@@ -285,21 +286,21 @@ const Character = () => {
         <div className='mt-2 bg-gray-200/60 dark:bg-gray-800/60 backdrop-blur rounded-md'>
           <div className='flex flex-wrap justify-center mx-2'>
             <div style={{width: '100%'}} className='flex flex-wrap justify-center mt-4'>
-              <button type='button' onClick={eyeSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Eyes</button>
-              <button type='button' onClick={gloveSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Gloves</button>
-              <button type='button' onClick={padSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Pads</button>
-              <button type='button' onClick={skinSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Face</button>
+              <button type='button' onClick={eyeSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Eyes</button>
+              <button type='button' onClick={gloveSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Gloves</button>
+              <button type='button' onClick={padSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Pads</button>
+              <button type='button' onClick={skinSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Face</button>
             </div>
             <div style={{width: '100%'}} className='flex flex-wrap justify-center mt-4'>
-              <button type='button' onClick={hairColorSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Hair Color</button>
-              <button type='button' onClick={hairStyleSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Hair Style</button>
-              <button type='button' onClick={bodyTypeSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Body Type</button>
-              <button type='button' onClick={bodyColorSelector} className={buttonClasses} style={{backgroundColor: currentColor }} >Suit Color</button>
+              <button type='button' onClick={hairColorSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Hair Color</button>
+              <button type='button' onClick={hairStyleSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Hair Style</button>
+              <button type='button' onClick={bodyTypeSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Body Type</button>
+              <button type='button' onClick={bodyColorSelector} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px' }} >Suit Color</button>
             </div>
           </div>
           <div className='flex items-center flex-col my-4'>
-            <input type='text' value={name} id='name' onChange={updateName}style={{width:'250px'}} className='mb-4 text-center' />
-            <button tyep='button' onClick={saveAvatar} className={buttonClasses} style={{backgroundColor: currentColor, fontSize: 'large' }} >Save</button>
+            <input type='text' value={name} id='name' onChange={updateName}style={{ width: '250px', borderRadius: '2px' }} className='mb-4 text-center' />
+            <button tyep='button' onClick={saveAvatar} className={buttonClasses} style={{backgroundColor: currentColor, borderRadius: '10px', fontSize: 'large', fontWeight: '800' }} >SAVE</button>
           </div>
         </div>
       </div>
