@@ -439,6 +439,10 @@ export const links = [
       {
         name: 'character',
         icon: <HiUserCircle />,
+      },
+      {
+        name: 'ready',
+        icon: <HiUserCircle />,
       }
     ],
   },

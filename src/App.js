@@ -4,7 +4,7 @@ import {FiSettings } from 'react-icons/fi'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import { Navbar, Footer, Sidebar, ThemeSettings, UserProfile } from './components'
-import { Adventuring, Character, Items, Calendar, Friends, Stacked, Pyramid, NPCShops, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './pages'
+import { Adventuring, Character, Ready, Items, Calendar, Friends, Stacked, Pyramid, NPCShops, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line } from './pages'
 import './App.css'
 
 import { useStateContext } from './contexts/ContextProvider'
@@ -76,6 +76,7 @@ const App = () => {
               <Route path="/" element={<Adventuring />} />
               <Route path="/adventuring" element={<Adventuring />} />
               <Route path="/character" element={<Character />} />
+              <Route path="/ready" element={<Ready />} />
               {/* pages */}
               <Route path="/items" element={<Items />} />
               <Route path="/friends" element={<Friends />} />
