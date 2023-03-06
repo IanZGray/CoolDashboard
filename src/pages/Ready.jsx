@@ -16,7 +16,7 @@ function Ready() {
 
     function parse(event) {
         try {
-            return event.data;
+            return JSON.parse(event.data);
         } catch (error) {
             console.log('null error catch')
             return null;
@@ -25,7 +25,7 @@ function Ready() {
 
     function subscribe(event) {
         const json = parse(event);
-        console.log(json)
+        // console.log(json)
 
         if (json?.source !== 'readyplayerme') {
             return;
