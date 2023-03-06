@@ -437,11 +437,11 @@ export const links = [
         icon: <IoIosCloudyNight />,
       },
       {
-        name: 'character',
+        name: 'character2D',
         icon: <HiUserCircle />,
       },
       {
-        name: 'ready',
+        name: 'character3D',
         icon: <HiUserCircle />,
       }
     ],

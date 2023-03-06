@@ -75,8 +75,8 @@ const App = () => {
               {/* dashboard */}
               <Route path="/" element={<Adventuring />} />
               <Route path="/adventuring" element={<Adventuring />} />
-              <Route path="/character" element={<Character />} />
-              <Route path="/ready" element={<Ready />} />
+              <Route path="/character2d" element={<Character />} />
+              <Route path="/character3d" element={<Ready />} />
               {/* pages */}
               <Route path="/items" element={<Items />} />
               <Route path="/friends" element={<Friends />} />

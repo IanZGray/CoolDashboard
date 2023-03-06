@@ -49,6 +49,7 @@ function Ready() {
             document.getElementById('avatarUrl').innerHTML = `Avatar URL: ${json.data.url}`;
             // document.getElementById('frame').hidden = true;
             localStorage.setItem('readyUrl', json.data.url)
+            
         }
 
         // Get user id
@@ -74,11 +75,11 @@ function Ready() {
         id="avatarUrl"
         className='font-semibold mb-2 px-2 bg-slate-800'
         style={{color:currentColor, textAlign: 'center'}}
-    >{`Download Avatar from URL: ${localStorage.getItem('readyUrl')}` || `Download Avatar from URL: `}</p>
+    >{localStorage.getItem('readyUrl') ? `Download Avatar from URL: ${localStorage.getItem('readyUrl')}` : `Download Avatar from URL: `}</p>
 
     <iframe 
         id="frame" 
-        style={{width: '100%', minHeight: '500px', maxHeight: '800px', margin: '0', fontSize: '14px', border: 'none'}}
+        style={{width: '100%', height: '700px', margin: '0', fontSize: '14px', border: 'none'}}
         allow="camera *; microphone *; clipboard-write" 
         // hidden
         src={`https://${subdomain}.readyplayer.me/avatar?frameApi`}
