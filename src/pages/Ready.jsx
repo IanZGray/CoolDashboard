@@ -74,7 +74,7 @@ function Ready() {
         id="avatarUrl"
         className='font-semibold mb-2 px-2 bg-slate-800'
         style={{color:currentColor, textAlign: 'center'}}
-    >{`Avatar URL: ${localStorage.getItem('readyUrl')}` || `Avatar URL: `}</p>
+    >{`Download Avatar from URL: ${localStorage.getItem('readyUrl')}` || `Download Avatar from URL: `}</p>
 
     <iframe 
         id="frame" 
