@@ -1,17 +1,31 @@
 import React from 'react'
 
 import Header from '../components/Header'
+import { useStateContext } from '../contexts/ContextProvider'
+
 
 function Ready() {
+    
+    const { currentColor } = useStateContext()
 
     const subdomain = 'demo'; // Replace with your custom subdomain
-    const frame = document.getElementById('frame');
+    // const frame = document.getElementById('frame');
 
     window.addEventListener('message', subscribe);
     document.addEventListener('message', subscribe);
 
+    function parse(event) {
+        try {
+            return event.data;
+        } catch (error) {
+            console.log('null error catch')
+            return null;
+        }
+    }
+
     function subscribe(event) {
         const json = parse(event);
+        console.log(json)
 
         if (json?.source !== 'readyplayerme') {
             return;
@@ -19,7 +33,7 @@ function Ready() {
 
         // Susbribe to all events sent from Ready Player Me once frame is ready
         if (json.eventName === 'v1.frame.ready') {
-            frame.contentWindow.postMessage(
+            document.getElementById('frame').contentWindow.postMessage(
                 JSON.stringify({
                     target: 'readyplayerme',
                     type: 'subscribe',
@@ -33,27 +47,20 @@ function Ready() {
         if (json.eventName === 'v1.avatar.exported') {
             console.log(`Avatar URL: ${json.data.url}`);
             document.getElementById('avatarUrl').innerHTML = `Avatar URL: ${json.data.url}`;
-            document.getElementById('frame').hidden = true;
-            localStorage.setItem('readyAvatar', json.data.url)
+            // document.getElementById('frame').hidden = true;
+            localStorage.setItem('readyUrl', json.data.url)
         }
 
         // Get user id
         if (json.eventName === 'v1.user.set') {
             console.log(`User with id ${json.data.id} set: ${JSON.stringify(json)}`);
+            localStorage.setItem('readyId', json.data.id)
         }
     }
 
-    function parse(event) {
-        try {
-            return JSON.parse(event.data);
-        } catch (error) {
-            return null;
-        }
-    }
-
-    function displayIframe() {
-        document.getElementById('frame').hidden = false;
-    }
+    // function displayIframe() {
+    //     document.getElementById('frame').hidden = false;
+    // }
 
   return (
     <div className='m-2 md:m-10 mt-24 p-2 md:p-10 flex flex-col justify-center object-center bg-white/50 dark:bg-gray-600/50 backdrop-blur rounded-xl'>
@@ -63,7 +70,11 @@ function Ready() {
       title='Character Customization'
     />
 
-    <p id="avatarUrl">Avatar URL:</p>
+    <p 
+        id="avatarUrl"
+        className='font-semibold mb-2 px-2 bg-slate-800'
+        style={{color:currentColor, textAlign: 'center'}}
+    >{`Avatar URL: ${localStorage.getItem('readyUrl')}` || `Avatar URL: `}</p>
 
     <iframe 
         id="frame" 
