@@ -62,7 +62,7 @@ const Navbar = () => {
       setActiveMenu(false)
     } else {
       // change to true after working on it
-      setActiveMenu(false)
+      setActiveMenu(true)
     }
   }, [screenSize])
   
